@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  margin-bottom: 19px;
+  border-radius: 7px;
+  height: 58px;
+  align-items: center;
+  color: #5e5ebb;
+  width: 480px;
+
+
+}
+.item{
+  padding: 0px 15px;
+}
+.btnChangePrice{
+  background-color: #8b8fdf;
+  color: #3b3636;
+  outline: none !important;
+  border: none;
+}
+.btnCounter{
+  background-color: #e0a2e0;
+  border: none;
+  margin-right: 5px;
+  outline: none !important;
+}
+.lblCounter{
+  color: red;
+  padding: 0px 7px;
+}
+.inputbox{
+  padding: 12px 34px;
+  margin-right: 7px;
+}
+.btnadd{
+  background-color: white;
+  border: 1px solid gray;
+  color: green;
+  margin: 15px;
+}
+.frmAdd{
+  border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin-bottom: 23px;
+}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
