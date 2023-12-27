@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-
-const MyForm = () => {
+import TestCssProblem from './TestCssProblem';
+import styles from './MyForm.module.css'
+const MyForm = ({a}) => {
   const [myFormData, setMyFormData] = useState({type:'',price:0})
+
   const submitHandler=(e)=>{
       e.preventDefault();
-      console.log(myFormData)
+      a(myFormData)
+      setMyFormData({type:'',price:0})
      
   }
   const typeChangeHandler=(e)=>{
@@ -15,12 +18,13 @@ const MyForm = () => {
   }
   return (
     <div>
-      
-      <form className='frmAdd' onSubmit={submitHandler}>
-        <input className='inputbox' type="text" placeholder='cost type' onChange={typeChangeHandler}/>
-        <input className='inputbox' type="number" placeholder='cost price' onChange={priceChangeHandler} />
+        <form className={`${styles.c1}`} onSubmit={submitHandler}>
+        <input className='inputbox' type="text" placeholder='cost type' onChange={typeChangeHandler} value={myFormData.type}/>
+        <input className='inputbox' type="number" placeholder='cost price' onChange={priceChangeHandler} value={myFormData.price}/>
         <button className='btnadd'>Add</button>
-      </form>
+        <div className={`${styles.c1} , ${styles.c2-1}`}>hksdhfkshd</div>
+        </form>
+      <TestCssProblem/>
     </div>
   )
 }
